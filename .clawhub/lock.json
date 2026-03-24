@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "skills": {
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1774340826450
+    },
+    "dragon-ppt-maker": {
+      "version": "1.0.0",
+      "installedAt": 1774340881294
+    },
+    "flight-search": {
+      "version": "0.1.7",
+      "installedAt": 1774340942107
+    },
+    "ppt-outline": {
+      "version": "2.0.0",
+      "installedAt": 1774341122717
+    },
+    "ai-ppt": {
+      "version": "1.0.4",
+      "installedAt": 1774341482550
+    },
+    "github-cli": {
+      "version": "1.0.0",
+      "installedAt": 1774341722965
+    },
+    "code-review": {
+      "version": "1.0.0",
+      "installedAt": 1774342801233
+    }
+  }
+}

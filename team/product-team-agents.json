@@ -1,0 +1,87 @@
+{
+  "name": "产品团队",
+  "createdAt": "2026-03-24T10:49:00+08:00",
+  "updatedAt": "2026-03-24T10:50:00+08:00",
+  "configFile": "/home/admin/openclaw/workspace/team/product-team.json",
+  "status": "complete",
+  "agents": [
+    {
+      "id": "pm-agent",
+      "name": "PM Agent",
+      "role": "产品经理",
+      "sessionKey": "agent:main:subagent:120e30cf-86a8-473d-b4e9-82b1afdc29a2",
+      "runId": "86a3b914-d343-46d5-a200-807cf159e2d6",
+      "status": "active"
+    },
+    {
+      "id": "pre-research-agent",
+      "name": "Pre-Research Agent",
+      "role": "前期调研",
+      "sessionKey": "agent:main:subagent:f8284b2a-cc61-4db8-b74e-a86b1d6d587c",
+      "runId": "14acdad4-0d60-43ef-b4d5-f63fada7f2ae",
+      "status": "active"
+    },
+    {
+      "id": "research-agent",
+      "name": "Research Agent",
+      "role": "市场/用户研究",
+      "sessionKey": "agent:main:subagent:10e9873e-ad49-458e-a5ea-5ec89cbb1908",
+      "runId": "274ef6bc-7d74-4e4e-8244-4bd9b23679ef",
+      "status": "active"
+    },
+    {
+      "id": "design-agent",
+      "name": "Design Agent",
+      "role": "设计",
+      "sessionKey": "agent:main:subagent:bd045627-e324-46dc-bd0a-bd60849bed13",
+      "runId": "31943c97-a452-440b-ae23-2933d6f2deb9",
+      "status": "active"
+    },
+    {
+      "id": "architecture-agent",
+      "name": "Architecture Agent",
+      "role": "架构设计",
+      "sessionKey": "agent:main:subagent:7e79a92a-0902-4582-b828-a1a76c17fe05",
+      "runId": "ae88997b-605e-45af-8822-7bb74c5967d7",
+      "status": "active"
+    },
+    {
+      "id": "dev-agent",
+      "name": "Dev Agent",
+      "role": "开发工程师",
+      "sessionKey": "agent:main:subagent:e4400682-e3cb-4f91-b772-42d2b15f8f96",
+      "runId": "96789955-30c7-405f-9d27-6e47f67e2363",
+      "status": "active"
+    },
+    {
+      "id": "qa-agent",
+      "name": "QA Agent",
+      "role": "测试工程师",
+      "sessionKey": "agent:main:subagent:6aa96e6e-11d1-4295-a721-979c22c22ff3",
+      "runId": "2a3b54ae-9bd0-4d3e-b750-a34c70437194",
+      "status": "active"
+    },
+    {
+      "id": "devops-agent",
+      "name": "DevOps Agent",
+      "role": "运维工程师",
+      "sessionKey": "agent:main:subagent:bb0b5b15-ed6a-4a78-9fa5-55999c336df3",
+      "runId": "a05370f7-09ef-40a6-90cb-678cb915ab8c",
+      "status": "active"
+    },
+    {
+      "id": "ops-agent",
+      "name": "Ops Agent",
+      "role": "运营",
+      "sessionKey": "agent:main:subagent:23947e9c-a4b0-454d-b9d3-6f1b2eaef8c7",
+      "runId": "d70a72a6-5691-433c-850d-77dca523fc6d",
+      "status": "active"
+    }
+  ],
+  "persistence": {
+    "configPath": "/home/admin/openclaw/workspace/team/product-team.json",
+    "agentsPath": "/home/admin/openclaw/workspace/team/product-team-agents.json",
+    "notes": "配置文件已保存，Gateway 重启后可通过读取这些文件恢复团队配置"
+  },
+  "notes": "由于 OpenIM channel 不支持 thread=true，子代理使用 mode=run 模式创建。配置已持久化。"
+}

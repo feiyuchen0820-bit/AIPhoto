@@ -1,0 +1,32 @@
+# OpenClaw
+.openclaw/
+*.log
+*.lock
+
+# Node
+node_modules/
+.npm/
+
+# Python
+__pycache__/
+*.pyc
+.pyo
+
+# Temp
+tmp/
+temp/
+*.tmp
+
+# Secrets
+*.pem
+*.key
+*.secret
+.env
+
+# Large files
+*.pdf
+*.pptx
+*.docx
+*.xlsx
+*.zip
+*.tar.gz
