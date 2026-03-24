@@ -1,0 +1,1079 @@
+<h1 id="aiphoto-高保真-uiux-设计文档">AIPhoto 高保真 UI/UX 设计文档</h1>
+<p><strong>版本：</strong> 1.0<br />
+<strong>创建日期：</strong> 2026-03-24<br />
+<strong>设计师：</strong> Design Agent<br />
+<strong>产品定位：</strong> AI 图片编辑应用 - 年轻化、现代简约、活力感</p>
+<hr />
+<h2 id="目录">目录</h2>
+<ol type="1">
+<li><a href="#1-设计规范">设计规范</a></li>
+<li><a href="#2-启动页引导页">启动页/引导页</a></li>
+<li><a href="#3-首页">首页</a></li>
+<li><a href="#4-图片编辑页">图片编辑页</a></li>
+<li><a href="#5-滤镜选择页">滤镜选择页</a></li>
+<li><a href="#6-美颜调节页">美颜调节页</a></li>
+<li><a href="#7-拼图编辑页">拼图编辑页</a></li>
+<li><a href="#8-个人中心页">个人中心页</a></li>
+<li><a href="#9-交互说明">交互说明</a></li>
+</ol>
+<hr />
+<h2 id="设计规范">1. 设计规范</h2>
+<h3 id="颜色系统">1.1 颜色系统</h3>
+<h4 id="主色-primary-colors">主色 (Primary Colors)</h4>
+<table>
+<thead>
+<tr class="header">
+<th>颜色名称</th>
+<th>色值</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary Purple</td>
+<td><code>#7C5CFF</code></td>
+<td>主按钮、选中状态、品牌色</td>
+</tr>
+<tr class="even">
+<td>Primary Purple Light</td>
+<td><code>#9B85FF</code></td>
+<td>悬停状态、渐变</td>
+</tr>
+<tr class="odd">
+<td>Primary Purple Dark</td>
+<td><code>#5D3FE6</code></td>
+<td>按下状态、深色模式</td>
+</tr>
+</tbody>
+</table>
+<h4 id="辅助色-secondary-colors">辅助色 (Secondary Colors)</h4>
+<table>
+<thead>
+<tr class="header">
+<th>颜色名称</th>
+<th>色值</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accent Pink</td>
+<td><code>#FF6B9D</code></td>
+<td>美颜功能、女性化元素</td>
+</tr>
+<tr class="even">
+<td>Accent Blue</td>
+<td><code>#4DC9FF</code></td>
+<td>AI 功能、科技感元素</td>
+</tr>
+<tr class="odd">
+<td>Accent Orange</td>
+<td><code>#FF9F43</code></td>
+<td>VIP/付费功能</td>
+</tr>
+</tbody>
+</table>
+<h4 id="功能色-functional-colors">功能色 (Functional Colors)</h4>
+<table>
+<thead>
+<tr class="header">
+<th>颜色名称</th>
+<th>色值</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Success Green</td>
+<td><code>#2ED573</code></td>
+<td>成功状态、完成</td>
+</tr>
+<tr class="even">
+<td>Warning Yellow</td>
+<td><code>#FFA502</code></td>
+<td>警告、注意</td>
+</tr>
+<tr class="odd">
+<td>Error Red</td>
+<td><code>#FF4757</code></td>
+<td>错误、删除</td>
+</tr>
+<tr class="even">
+<td>Info Blue</td>
+<td><code>#3742FA</code></td>
+<td>信息提示</td>
+</tr>
+</tbody>
+</table>
+<h4 id="中性色-neutral-colors">中性色 (Neutral Colors)</h4>
+<table>
+<thead>
+<tr class="header">
+<th>颜色名称</th>
+<th>色值</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>White</td>
+<td><code>#FFFFFF</code></td>
+<td>背景、文字（深色背景）</td>
+</tr>
+<tr class="even">
+<td>Gray 50</td>
+<td><code>#F8F9FA</code></td>
+<td>卡片背景、分割线</td>
+</tr>
+<tr class="odd">
+<td>Gray 100</td>
+<td><code>#F1F3F5</code></td>
+<td>次要背景</td>
+</tr>
+<tr class="even">
+<td>Gray 200</td>
+<td><code>#E9ECEF</code></td>
+<td>边框、禁用</td>
+</tr>
+<tr class="odd">
+<td>Gray 400</td>
+<td><code>#ADB5BD</code></td>
+<td>次要文字</td>
+</tr>
+<tr class="even">
+<td>Gray 600</td>
+<td><code>#495057</code></td>
+<td>正文文字</td>
+</tr>
+<tr class="odd">
+<td>Gray 800</td>
+<td><code>#212529</code></td>
+<td>标题文字</td>
+</tr>
+<tr class="even">
+<td>Black</td>
+<td><code>#000000</code></td>
+<td>深色模式背景</td>
+</tr>
+</tbody>
+</table>
+<h4 id="渐变色-gradients">渐变色 (Gradients)</h4>
+<pre><code>主渐变：linear-gradient(135deg, #7C5CFF 0%, #FF6B9D 100%)
+AI 渐变：linear-gradient(135deg, #4DC9FF 0%, #7C5CFF 100%)
+VIP 渐变：linear-gradient(135deg, #FF9F43 0%, #FF6B9D 100%)</code></pre>
+<h3 id="字体系统">1.2 字体系统</h3>
+<h4 id="字体家族">字体家族</h4>
+<ul>
+<li><strong>中文：</strong> PingFang SC, Hiragino Sans GB, Microsoft YaHei</li>
+<li><strong>英文：</strong> SF Pro Display, Inter, Roboto</li>
+<li><strong>数字/代码：</strong> SF Mono, JetBrains Mono</li>
+</ul>
+<h4 id="字号层级-typography-scale">字号层级 (Typography Scale)</h4>
+<table>
+<thead>
+<tr class="header">
+<th>层级</th>
+<th>字号</th>
+<th>字重</th>
+<th>行高</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H1</td>
+<td>32px</td>
+<td>Bold (700)</td>
+<td>1.2</td>
+<td>页面大标题</td>
+</tr>
+<tr class="even">
+<td>H2</td>
+<td>24px</td>
+<td>Bold (700)</td>
+<td>1.3</td>
+<td>模块标题</td>
+</tr>
+<tr class="odd">
+<td>H3</td>
+<td>20px</td>
+<td>Semibold (600)</td>
+<td>1.4</td>
+<td>子标题</td>
+</tr>
+<tr class="even">
+<td>Body Large</td>
+<td>18px</td>
+<td>Regular (400)</td>
+<td>1.5</td>
+<td>重要正文</td>
+</tr>
+<tr class="odd">
+<td>Body</td>
+<td>16px</td>
+<td>Regular (400)</td>
+<td>1.5</td>
+<td>标准正文</td>
+</tr>
+<tr class="even">
+<td>Body Small</td>
+<td>14px</td>
+<td>Regular (400)</td>
+<td>1.5</td>
+<td>次要正文</td>
+</tr>
+<tr class="odd">
+<td>Caption</td>
+<td>12px</td>
+<td>Regular (400)</td>
+<td>1.4</td>
+<td>说明文字</td>
+</tr>
+<tr class="even">
+<td>Micro</td>
+<td>10px</td>
+<td>Regular (400)</td>
+<td>1.3</td>
+<td>标签、角标</td>
+</tr>
+</tbody>
+</table>
+<h4 id="字重规范">字重规范</h4>
+<ul>
+<li><strong>Bold (700)：</strong> 标题、重要强调</li>
+<li><strong>Semibold (600)：</strong> 子标题、按钮文字</li>
+<li><strong>Medium (500)：</strong> 选中状态、Tab</li>
+<li><strong>Regular (400)：</strong> 正文、说明文字</li>
+</ul>
+<h3 id="图标规范">1.3 图标规范</h3>
+<h4 id="基础网格">基础网格</h4>
+<ul>
+<li><strong>基准尺寸：</strong> 24px × 24px</li>
+<li><strong>安全边距：</strong> 2px（图标内容距边界）</li>
+<li><strong>线条粗细：</strong> 2px（描边图标）</li>
+</ul>
+<h4 id="图标风格">图标风格</h4>
+<ul>
+<li><strong>类型：</strong> 线性图标为主，填充图标为辅</li>
+<li><strong>圆角：</strong> 2px（线条端点）</li>
+<li><strong>风格：</strong> 简洁、现代、一致</li>
+<li><strong>颜色：</strong> 默认 Gray 600，选中 Primary Purple</li>
+</ul>
+<h4 id="常用图标尺寸">常用图标尺寸</h4>
+<table>
+<thead>
+<tr class="header">
+<th>场景</th>
+<th>尺寸</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tab Bar</td>
+<td>24px</td>
+<td>底部导航</td>
+</tr>
+<tr class="even">
+<td>Toolbar</td>
+<td>28px</td>
+<td>工具栏</td>
+</tr>
+<tr class="odd">
+<td>Feature Grid</td>
+<td>32px</td>
+<td>功能入口</td>
+</tr>
+<tr class="even">
+<td>Button Icon</td>
+<td>20px</td>
+<td>按钮内图标</td>
+</tr>
+</tbody>
+</table>
+<h3 id="组件库">1.4 组件库</h3>
+<h4 id="按钮-buttons">按钮 (Buttons)</h4>
+<p><strong>主要按钮 (Primary Button)</strong></p>
+<pre><code>高度：48px
+圆角：24px (全圆角)
+背景：Primary Purple (#7C5CFF)
+文字：White, 16px, Semibold
+阴影：0 4px 12px rgba(124, 92, 255, 0.3)
+状态：
+  - Normal: #7C5CFF
+  - Hover: #9B85FF
+  - Pressed: #5D3FE6
+  - Disabled: Gray 200, 文字 Gray 400</code></pre>
+<p><strong>次要按钮 (Secondary Button)</strong></p>
+<pre><code>高度：48px
+圆角：24px
+背景：White
+边框：1px solid Gray 200
+文字：Gray 800, 16px, Semibold
+状态：
+  - Normal: White + Gray 200 边框
+  - Hover: Gray 50
+  - Pressed: Gray 100</code></pre>
+<p><strong>文字按钮 (Text Button)</strong></p>
+<pre><code>高度：36px (无背景)
+圆角：8px
+背景：Transparent
+文字：Primary Purple, 16px, Semibold
+状态：
+  - Normal: #7C5CFF
+  - Pressed: rgba(124, 92, 255, 0.1) 背景</code></pre>
+<h4 id="输入框-input-fields">输入框 (Input Fields)</h4>
+<pre><code>高度：48px
+圆角：12px
+背景：Gray 50
+边框：1px solid Gray 200
+文字：Gray 800, 16px
+Placeholder: Gray 400
+聚焦状态：边框 Primary Purple, 阴影 0 0 0 2px rgba(124,92,255,0.2)</code></pre>
+<h4 id="滑块-slider">滑块 (Slider)</h4>
+<pre><code>轨道高度：4px
+轨道背景：Gray 200
+轨道进度：Primary Purple
+滑块直径：20px
+滑块阴影：0 2px 8px rgba(0,0,0,0.2)
+最小点击区域：44px × 44px</code></pre>
+<h4 id="开关-switch">开关 (Switch)</h4>
+<pre><code>尺寸：50px × 30px
+圆角：15px
+关闭状态：Gray 200 背景
+开启状态：Primary Purple 背景
+滑块直径：26px
+滑块阴影：0 2px 6px rgba(0,0,0,0.25)</code></pre>
+<h4 id="选择器-picker">选择器 (Picker)</h4>
+<pre><code>高度：56px
+圆角：12px
+背景：White
+边框：1px solid Gray 200
+下拉箭头：Gray 400
+选项高度：48px</code></pre>
+<hr />
+<h2 id="启动页引导页">2. 启动页/引导页</h2>
+<h3 id="整体设计">2.1 整体设计</h3>
+<ul>
+<li><strong>背景：</strong> 主渐变 (Purple → Pink)</li>
+<li><strong>风格：</strong> 全屏插画 + 简洁文案</li>
+<li><strong>动画：</strong> 页面切换淡入淡出 + 元素上浮</li>
+<li><strong>数量：</strong> 3 屏</li>
+</ul>
+<h3 id="第一屏---欢迎页">2.2 第一屏 - 欢迎页</h3>
+<pre><code>┌─────────────────────────────────┐
+│                                 │
+│                                 │
+│         ✨ AIPhoto ✨           │
+│         (Logo 64px)             │
+│                                 │
+│                                 │
+│    ┌─────────────────────┐      │
+│    │                     │      │
+│    │   [插画区域]         │      │
+│    │   AI 修图示意图       │      │
+│    │   280px × 280px      │      │
+│    │                     │      │
+│    └─────────────────────┘      │
+│                                 │
+│    智能修图，一键变美            │
+│    (H2, White, 居中)            │
+│                                 │
+│    AI 驱动的图像编辑工具         │
+│    (Body, rgba(255,255,255,0.8))│
+│                                 │
+│                                 │
+│         ● ○ ○                   │
+│    (分页指示器，White)           │
+│                                 │
+└─────────────────────────────────┘</code></pre>
+<p><strong>设计说明：</strong> - Logo 使用品牌渐变，带轻微发光效果 - 插画展示 AI 修图前后对比效果 - 文案突出核心价值 - 底部圆点指示器表示 3 屏中的第 1 屏</p>
+<h3 id="第二屏---功能亮点">2.3 第二屏 - 功能亮点</h3>
+<pre><code>┌─────────────────────────────────┐
+│                                 │
+│                                 │
+│    ┌─────────────────────┐      │
+│    │   [插画区域]         │      │
+│    │   美颜功能示意       │      │
+│    │   280px × 280px      │      │
+│    └─────────────────────┘      │
+│                                 │
+│    专业美颜，自然动人            │
+│    (H2, White, 居中)            │
+│                                 │
+│    磨皮/美白/瘦脸/大眼          │
+│    多种美颜效果随心调节         │
+│    (Body, rgba(255,255,255,0.8))│
+│                                 │
+│         ○ ● ○                   │
+│                                 │
+└─────────────────────────────────┘</code></pre>
+<p><strong>设计说明：</strong> - 插画展示美颜调节界面 - 列出核心美颜功能关键词 - 分页指示器高亮第 2 个点</p>
+<h3 id="第三屏---开始使用">2.4 第三屏 - 开始使用</h3>
+<pre><code>┌─────────────────────────────────┐
+│                                 │
+│                                 │
+│    ┌─────────────────────┐      │
+│    │   [插画区域]         │      │
+│    │   滤镜效果展示       │      │
+│    │   280px × 280px      │      │
+│    └─────────────────────┘      │
+│                                 │
+│    海量滤镜，风格百变            │
+│    (H2, White, 居中)            │
+│                                 │
+│    胶片/复古/清新/电影感        │
+│    找到属于你的专属风格         │
+│    (Body, rgba(255,255,255,0.8))│
+│                                 │
+│         ○ ○ ●                   │
+│                                 │
+│    ┌─────────────────────┐      │
+│    │                     │      │
+│    │   立即开始          │      │
+│    │   (Primary Button)  │      │
+│    │                     │      │
+│    └─────────────────────┘      │
+│                                 │
+│    已有账号？登录               │
+│    (Text Button, White)         │
+│                                 │
+└─────────────────────────────────┘</code></pre>
+<p><strong>设计说明：</strong> - 展示滤镜预览效果 - “立即开始”按钮引导新用户 - “登录”入口服务老用户 - 底部安全区域适配全面屏</p>
+<hr />
+<h2 id="首页">3. 首页</h2>
+<h3 id="页面布局">3.1 页面布局</h3>
+<pre><code>┌─────────────────────────────────┐
+│  状态栏 (24px)                  │
+├─────────────────────────────────┤
+│  搜索框区域 (56px)              │
+│  ┌─────────────────────────┐    │
+│  │ 🔍 搜索教程/滤镜...     │    │
+│  └─────────────────────────┘    │
+├─────────────────────────────────┤
+│  Banner 轮播 (160px)            │
+│  ┌─────────────────────────┐    │
+│  │                         │    │
+│  │   [活动/教程 Banner]     │    │
+│  │                         │    │
+│  └─────────────────────────┘    │
+│  ● ○ ○ ○                        │
+├─────────────────────────────────┤
+│  常用功能 (标题 24px + 网格)     │
+│  ┌────┐ ┌────┐ ┌────┐ ┌────┐  │
+│  │ 📷 │ │ ✨ │ │ 🎨 │ │ 🖼️ │  │
+│  │裁切│ │美颜│ │滤镜│ │拼图│  │
+│  └────┘ └────┘ └────┘ └────┘  │
+│  ┌────┐ ┌────┐ ┌────┐ ┌────┐  │
+│  │ 🔧 │ │ 📐 │ │ 🌟 │ │ ➕ │  │
+│  │调节│ │边框│ │特效│ │更多│  │
+│  └────┘ └────┘ └────┘ └────┘  │
+├─────────────────────────────────┤
+│  最近项目 (标题 + 横向滚动)       │
+│  ┌─────┐ ┌─────┐ ┌─────┐       │
+│  │     │ │     │ │     │       │
+│  │ IMG │ │ IMG │ │ IMG │  →    │
+│  │     │ │     │ │     │       │
+│  └─────┘ └─────┘ └─────┘       │
+├─────────────────────────────────┤
+│  底部导航栏 (83px)              │
+│  ┌──────┬──────┬──────┬──────┐ │
+│  │ 首页 │ 创作 │ 发现 │ 我的 │ │
+│  │  ●   │      │      │      │ │
+│  └──────┴──────┴──────┴──────┘ │
+└─────────────────────────────────┘</code></pre>
+<h3 id="功能网格设计">3.2 功能网格设计</h3>
+<p><strong>网格布局：</strong> 4 列 × 2 行 <strong>图标尺寸：</strong> 48px <strong>卡片尺寸：</strong> 80px × 90px（含文字） <strong>间距：</strong> 左右 16px，卡片间距 12px</p>
+<p><strong>功能入口：</strong> | 图标 | 名称 | 颜色 | 功能 | |——|——|——|——| | 📷 | 裁切 | Primary Purple | 图片裁剪、旋转 | | ✨ | 美颜 | Accent Pink | 磨皮、美白、瘦脸 | | 🎨 | 滤镜 | Accent Blue | 滤镜选择、调节 | | 🖼️ | 拼图 | Accent Orange | 模板拼图、自由拼图 | | 🔧 | 调节 | Gray 600 | 亮度、对比度等 | | 📐 | 边框 | Gray 600 | 相框、边框 | | 🌟 | 特效 | Gray 600 | 光效、粒子特效 | | ➕ | 更多 | Gray 400 | 更多功能入口 |</p>
+<h3 id="底部导航栏">3.3 底部导航栏</h3>
+<pre><code>高度：83px (含安全区域)
+背景：White
+选中状态：Primary Purple + 文字
+未选中：Gray 400
+
+┌──────┬──────┬──────┬──────┐
+│ 🏠   │ ✏️   │ 🧭   │ 👤   │
+│ 首页 │ 创作 │ 发现 │ 我的 │
+│ #7C5CFF │ #ADB5BD │ #ADB5BD │ #ADB5BD │
+└──────┴──────┴──────┴──────┘</code></pre>
+<hr />
+<h2 id="图片编辑页">4. 图片编辑页</h2>
+<h3 id="页面布局核心界面">4.1 页面布局（核心界面）</h3>
+<pre><code>┌─────────────────────────────────┐
+│  顶部工具栏 (44px)              │
+│  ← 取消    图片    保存 →       │
+├─────────────────────────────────┤
+│                                 │
+│  ┌─────────────────────────┐    │
+│  │                         │    │
+│  │                         │    │
+│  │     [图片预览区域]       │    │
+│  │     自适应高度          │    │
+│  │                         │    │
+│  │                         │    │
+│  └─────────────────────────┘    │
+│                                 │
+├─────────────────────────────────┤
+│  工具分类 Tab (56px)            │
+│  [基础] [美颜] [滤镜] [特效]    │
+│   ●●●●                          │
+├─────────────────────────────────┤
+│  工具选项 (120px)               │
+│  ┌───┐ ┌───┐ ┌───┐ ┌───┐      │
+│  │裁切│ │旋转│ │翻转│ │比例│  │
+│  └───┘ └───┘ └───┘ └───┘  →   │
+│                                 │
+└─────────────────────────────────┘</code></pre>
+<h3 id="顶部工具栏">4.2 顶部工具栏</h3>
+<p><strong>布局：</strong> - <strong>左侧：</strong> 返回/取消按钮 (24px 图标) - <strong>中间：</strong> 图片文件名/状态 (14px, Semibold) - <strong>右侧：</strong> 保存按钮 (Primary Button, 32px 高度)</p>
+<p><strong>交互：</strong> - 取消：弹出“是否放弃编辑”确认 - 保存：处理并保存到相册</p>
+<h3 id="图片预览区域">4.3 图片预览区域</h3>
+<p><strong>特性：</strong> - 支持双指缩放（0.5x - 4x） - 支持单指拖动 - 支持双击 100% 显示 - 网格辅助线（三等分） - 长宽比实时显示</p>
+<p><strong>手势支持：</strong> | 手势 | 功能 | |——|——| | 单指拖动 | 移动图片 | | 双指捏合 | 缩放图片 | | 双击 | 100% 显示 / 适应屏幕 | | 双指旋转 | 自由旋转（基础编辑模式） |</p>
+<h3 id="工具分类-tab">4.4 工具分类 Tab</h3>
+<p><strong>Tab 设计：</strong></p>
+<pre><code>高度：56px
+背景：White
+选中指示器：底部 3px 圆角条，Primary Purple
+
+[  基础  ] [  美颜  ] [  滤镜  ] [  特效  ] [  调节  ]
+   ●●●                                       (下划线)</code></pre>
+<p><strong>分类内容：</strong> - <strong>基础：</strong> 裁切、旋转、翻转、比例、透视 - <strong>美颜：</strong> 磨皮、美白、瘦脸、大眼、隆鼻、口红 - <strong>滤镜：</strong> 推荐、胶片、复古、清新、电影、黑白 - <strong>特效：</strong> 光效、粒子、模糊、晕影、噪点 - <strong>调节：</strong> 亮度、对比度、饱和度、锐化、色温</p>
+<h3 id="工具选项区域">4.5 工具选项区域</h3>
+<p><strong>横向滚动列表：</strong> - 图标尺寸：40px × 40px - 卡片尺寸：64px × 76px（含文字） - 选中状态：Primary Purple 边框 + 背景 - 支持横向无限滚动</p>
+<hr />
+<h2 id="滤镜选择页">5. 滤镜选择页</h2>
+<h3 id="页面布局-1">5.1 页面布局</h3>
+<pre><code>┌─────────────────────────────────┐
+│  ← 滤镜                         │
+├─────────────────────────────────┤
+│                                 │
+│  ┌─────────────────────────┐    │
+│  │                         │    │
+│  │   [图片预览 + 滤镜效果]  │    │
+│  │                         │    │
+│  │   强度：━━━━━●━━━━      │    │
+│  │         0    50   100   │    │
+│  └─────────────────────────┘    │
+│                                 │
+├─────────────────────────────────┤
+│  分类 Tab (横向滚动)             │
+│  [推荐][胶片][复古][清新][电影]  │
+├─────────────────────────────────┤
+│  滤镜列表 (横向滚动)             │
+│  ┌────┐ ┌────┐ ┌────┐ ┌────┐   │
+│  │原图│ │ 春 │ │ 夏 │ │ 秋 │   │
+│  │    │ │ 日 │ │ 日 │ │ 日 │ → │
+│  └────┘ └────┘ └────┘ └────┘   │
+│   0    45    60    55           │
+│  (强度值)                        │
+└─────────────────────────────────┘</code></pre>
+<h3 id="滤镜预览卡片">5.2 滤镜预览卡片</h3>
+<p><strong>卡片设计：</strong></p>
+<pre><code>尺寸：88px × 100px
+圆角：8px
+图片预览：88px × 88px
+名称：12px, 居中，Gray 600
+强度值：10px, Gray 400, 名称下方
+选中边框：2px Primary Purple</code></pre>
+<p><strong>滤镜分类：</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>分类</th>
+<th>滤镜数量</th>
+<th>示例滤镜</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>推荐</td>
+<td>8</td>
+<td>自然、鲜明、质感</td>
+</tr>
+<tr class="even">
+<td>胶片</td>
+<td>12</td>
+<td>柯达、富士、黑白胶卷</td>
+</tr>
+<tr class="odd">
+<td>复古</td>
+<td>10</td>
+<td>怀旧、港风、老照片</td>
+</tr>
+<tr class="even">
+<td>清新</td>
+<td>10</td>
+<td>日系、奶油、薄荷</td>
+</tr>
+<tr class="odd">
+<td>电影</td>
+<td>12</td>
+<td>2046、花样、重庆森林</td>
+</tr>
+<tr class="even">
+<td>黑白</td>
+<td>6</td>
+<td>经典黑白、高对比、柔光</td>
+</tr>
+</tbody>
+</table>
+<h3 id="强度调节滑块">5.3 强度调节滑块</h3>
+<pre><code>位置：预览图底部叠加
+高度：40px（含点击区域）
+滑块：20px 直径
+轨道：4px 高度，Gray 200/Primary Purple
+数值显示：实时百分比</code></pre>
+<p><strong>交互：</strong> - 拖动滑块实时预览 - 点击轨道跳转 - 双击重置为 50% - 左右滑动快速切换滤镜</p>
+<hr />
+<h2 id="美颜调节页">6. 美颜调节页</h2>
+<h3 id="页面布局-2">6.1 页面布局</h3>
+<pre><code>┌─────────────────────────────────┐
+│  ← 美颜                         │
+├─────────────────────────────────┤
+│                                 │
+│  ┌─────────────────────────┐    │
+│  │                         │    │
+│  │   [人脸预览区域]         │    │
+│  │   (带人脸网格线)         │    │
+│  │                         │    │
+│  └─────────────────────────┘    │
+│                                 │
+├─────────────────────────────────┤
+│  美颜项目 (横向滚动)             │
+│  ┌────┐ ┌────┐ ┌────┐ ┌────┐   │
+│  │磨皮│ │美白│ │瘦脸│ │大眼│   │
+│  │ 45 │ │ 60 │ │ 30 │ │ 50 │ → │
+│  └────┘ └────┘ └────┘ └────┘   │
+├─────────────────────────────────┤
+│  强度调节面板 (从底部弹出)        │
+│  ┌─────────────────────────┐    │
+│  │                         │    │
+│  │   磨皮                  │    │
+│  │   ━━━━━━━━●━━━━━━━━━    │    │
+│  │   0    25   50   75  100│    │
+│  │                         │    │
+│  │   ● 自然模式            │    │
+│  │   ○ 精细模式            │    │
+│  │                         │    │
+│  └─────────────────────────┘    │
+└─────────────────────────────────┘</code></pre>
+<h3 id="美颜项目列表">6.2 美颜项目列表</h3>
+<p><strong>项目卡片：</strong></p>
+<pre><code>尺寸：72px × 84px
+图标：32px
+名称：12px
+当前值：14px, Primary Purple
+选中：Primary Purple 背景 + 白字</code></pre>
+<p><strong>美颜项目：</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>项目</th>
+<th>范围</th>
+<th>默认</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>磨皮</td>
+<td>0-100</td>
+<td>45</td>
+<td>皮肤平滑度</td>
+</tr>
+<tr class="even">
+<td>美白</td>
+<td>0-100</td>
+<td>30</td>
+<td>肤色提亮</td>
+</tr>
+<tr class="odd">
+<td>瘦脸</td>
+<td>0-100</td>
+<td>25</td>
+<td>脸部轮廓</td>
+</tr>
+<tr class="even">
+<td>大眼</td>
+<td>0-100</td>
+<td>30</td>
+<td>眼睛放大</td>
+</tr>
+<tr class="odd">
+<td>隆鼻</td>
+<td>0-100</td>
+<td>20</td>
+<td>鼻梁高度</td>
+</tr>
+<tr class="even">
+<td>口红</td>
+<td>0-100</td>
+<td>40</td>
+<td>唇色饱和度</td>
+</tr>
+<tr class="odd">
+<td>腮红</td>
+<td>0-100</td>
+<td>25</td>
+<td>脸颊红润</td>
+</tr>
+<tr class="even">
+<td>亮眼</td>
+<td>0-100</td>
+<td>35</td>
+<td>眼睛亮度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="强度调节面板">6.3 强度调节面板</h3>
+<p><strong>面板设计：</strong></p>
+<pre><code>高度：240px
+背景：White
+圆角：16px 16px 0 0
+阴影：0 -4px 24px rgba(0,0,0,0.15)
+
+标题：20px, Bold
+滑块：全宽，44px 点击区域
+模式切换：单选按钮，16px</code></pre>
+<p><strong>交互：</strong> - 点击项目弹出调节面板 - 面板可手势上滑关闭 - 支持实时预览对比（长按原图） - 支持一键美颜（智能推荐值）</p>
+<hr />
+<h2 id="拼图编辑页">7. 拼图编辑页</h2>
+<h3 id="页面布局-3">7.1 页面布局</h3>
+<pre><code>┌─────────────────────────────────┐
+│  ← 拼图                         │
+├─────────────────────────────────┤
+│  拼图类型 Tab                    │
+│  [ 模板拼图 ]  [ 自由拼图 ]      │
+│       ●                         │
+├─────────────────────────────────┤
+│                                 │
+│  ┌─────────────────────────┐    │
+│  │                         │    │
+│  │   [拼图预览区域]         │    │
+│  │                         │    │
+│  └─────────────────────────┘    │
+│                                 │
+├─────────────────────────────────┤
+│  画布比例                        │
+│  [1:1] [3:4] [9:16] [自由]      │
+├─────────────────────────────────┤
+│  模板选择 (网格)                 │
+│  ┌────┐ ┌────┐ ┌────┐ ┌────┐  │
+│  │ ▤  │ │ ▦  │ │ ▤  │ │ ▦  │  │
+│  │ 2  │ │ 3  │ │ 4  │ │ 5  │  │
+│  │ 格 │ │ 格 │ │ 格 │ │ 格 │  │
+│  └────┘ └────┘ └────┘ └────┘  │
+│  ┌────┐ ┌────┐ ┌────┐ ┌────┐  │
+│  │ ▧  │ │ ▤  │ │ ▦  │ │ ▤  │  │
+│  │ 6  │ │ 8  │ │ 9  │ │自由│  │
+│  │ 格 │ │ 格 │ │ 格 │ │ 拼图│  │
+│  └────┘ └────┘ └────┘ └────┘  │
+└─────────────────────────────────┘</code></pre>
+<h3 id="模板拼图">7.2 模板拼图</h3>
+<p><strong>模板网格：</strong></p>
+<pre><code>列数：4 列
+卡片尺寸：80px × 90px
+图标：48px (模板示意)
+格数：14px, Bold
+选中：Primary Purple 边框</code></pre>
+<p><strong>模板分类：</strong> - <strong>基础模板：</strong> 2-9 格标准布局 - <strong>创意模板：</strong> 不规则形状、圆形、心形 - <strong>海报模板：</strong> 带文字区域、装饰元素 - <strong>长图模板：</strong> 纵向拼接、故事模式</p>
+<h3 id="自由拼图">7.3 自由拼图</h3>
+<p><strong>功能特性：</strong> - 画布尺寸自定义 - 图片自由拖拽 - 图片大小/角度调节 - 背景色/背景图选择 - 图片边框/阴影/圆角</p>
+<p><strong>工具栏：</strong></p>
+<pre><code>[ 添加图片 ] [ 背景 ] [ 边框 ] [ 文字 ] [ 贴纸 ]</code></pre>
+<h3 id="画布比例选择">7.4 画布比例选择</h3>
+<pre><code>高度：48px
+选项：1:1, 3:4, 9:16, 4:3, 16:9, 自由
+选中：Primary Purple 背景 + 白字
+未选中：Gray 100 背景 + Gray 600 文字</code></pre>
+<hr />
+<h2 id="个人中心页">8. 个人中心页</h2>
+<h3 id="页面布局-4">8.1 页面布局</h3>
+<pre><code>┌─────────────────────────────────┐
+│  设置 ⚙️                        │
+├─────────────────────────────────┤
+│                                 │
+│  ┌─────────────────────────┐    │
+│  │                         │    │
+│  │   👤  [头像]            │    │
+│  │                         │    │
+│  │   用户名                │    │
+│  │   VIP 会员              │    │
+│  │                         │    │
+│  └─────────────────────────┘    │
+│                                 │
+├─────────────────────────────────┤
+│  我的服务                        │
+│  ┌─────────────────────────┐    │
+│  │ 👑 开通 VIP   →         │    │
+│  │ 📦 我的素材   →         │    │
+│  │ 🎨 我的滤镜   →         │    │
+│  │ 📝 编辑历史   →         │    │
+│  └─────────────────────────┘    │
+├─────────────────────────────────┤
+│  通用设置                        │
+│  ┌─────────────────────────┐    │
+│  │ 🌙 深色模式     [开关]  │    │
+│  │ 📐 导出质量     →       │    │
+│  │ 💾 缓存管理     →       │    │
+│  │ 🔔 消息通知     →       │    │
+│  └─────────────────────────┘    │
+├─────────────────────────────────┤
+│  其他                            │
+│  ┌─────────────────────────┐    │
+│  │ ❓ 帮助与反馈   →       │    │
+│  │ ⭐ 给我们评分   →       │    │
+│  │ 📄 用户协议     →       │    │
+│  │ 🔒 隐私政策     →       │    │
+│  │ ℹ️ 关于 AIPhoto  →      │    │
+│  └─────────────────────────┘    │
+│                                 │
+│         版本 1.0.0              │
+│                                 │
+└─────────────────────────────────┘</code></pre>
+<h3 id="用户信息卡片">8.2 用户信息卡片</h3>
+<pre><code>高度：160px
+背景：主渐变 (Purple → Pink)
+圆角：16px
+头像：80px 圆形，带白边
+用户名：18px, Bold, White
+VIP 标识：金色徽章，&quot;VIP 会员&quot;文字</code></pre>
+<h3 id="列表项设计">8.3 列表项设计</h3>
+<pre><code>高度：56px
+左图标：24px
+标题：16px, Gray 800
+右箭头：16px, Gray 400
+分割线：Gray 100, 1px
+点击反馈：Gray 50 背景</code></pre>
+<hr />
+<h2 id="交互说明">9. 交互说明</h2>
+<h3 id="页面跳转流程图">9.1 页面跳转流程图</h3>
+<pre><code>┌─────────────┐
+│   启动页    │
+│  (3 屏引导)  │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐     ┌─────────────┐
+│    首页     │────▶│   搜索页    │
+│  (功能入口)  │     │ (搜索教程)  │
+└──────┬──────┘     └─────────────┘
+       │
+       ├──────────────────────────────────────┐
+       │                   │                  │
+       ▼                   ▼                  ▼
+┌─────────────┐   ┌─────────────┐   ┌─────────────┐
+│  图片编辑   │   │   拼图页    │   │  个人中心   │
+│  (核心功能)  │   │ (模板选择)  │   │  (设置/VIP) │
+└──────┬──────┘   └─────────────┘   └─────────────┘
+       │
+       ├──────────┬──────────┬──────────┬──────────┐
+       │          │          │          │          │
+       ▼          ▼          ▼          ▼          ▼
+┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐
+│  裁切   │ │  美颜   │ │  滤镜   │ │  特效   │ │  调节   │
+└─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘</code></pre>
+<h3 id="手势操作">9.2 手势操作</h3>
+<h4 id="图片编辑手势">图片编辑手势</h4>
+<table>
+<thead>
+<tr class="header">
+<th>手势</th>
+<th>区域</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>单指拖动</td>
+<td>图片</td>
+<td>移动图片位置</td>
+</tr>
+<tr class="even">
+<td>双指捏合</td>
+<td>图片</td>
+<td>缩放 (0.5x - 4x)</td>
+</tr>
+<tr class="odd">
+<td>双指旋转</td>
+<td>图片</td>
+<td>自由旋转角度</td>
+</tr>
+<tr class="even">
+<td>双击</td>
+<td>图片</td>
+<td>100% / 适应屏幕切换</td>
+</tr>
+<tr class="odd">
+<td>长按</td>
+<td>图片</td>
+<td>原图对比预览</td>
+</tr>
+<tr class="even">
+<td>边缘滑动</td>
+<td>工具栏</td>
+<td>横向滚动切换工具</td>
+</tr>
+</tbody>
+</table>
+<h4 id="列表手势">列表手势</h4>
+<table>
+<thead>
+<tr class="header">
+<th>手势</th>
+<th>区域</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>单指滑动</td>
+<td>列表</td>
+<td>纵向滚动</td>
+</tr>
+<tr class="even">
+<td>横向滑动</td>
+<td>Tab</td>
+<td>切换分类</td>
+</tr>
+<tr class="odd">
+<td>下拉</td>
+<td>首页</td>
+<td>刷新内容</td>
+</tr>
+<tr class="even">
+<td>左滑</td>
+<td>列表项</td>
+<td>删除/更多操作</td>
+</tr>
+</tbody>
+</table>
+<h4 id="调节手势">调节手势</h4>
+<table>
+<thead>
+<tr class="header">
+<th>手势</th>
+<th>区域</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>左右滑动</td>
+<td>滑块</td>
+<td>调节强度</td>
+</tr>
+<tr class="even">
+<td>上下滑动</td>
+<td>预览区</td>
+<td>快速切换选项</td>
+</tr>
+<tr class="odd">
+<td>双击</td>
+<td>滑块</td>
+<td>重置默认值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="动效设计">9.3 动效设计</h3>
+<h4 id="转场动画">转场动画</h4>
+<p><strong>页面进入：</strong></p>
+<pre><code>类型：Slide Up + Fade In
+时长：300ms
+缓动：cubic-bezier(0.4, 0.0, 0.2, 1)
+位移：Y: 20px → 0px
+透明度：0 → 1</code></pre>
+<p><strong>页面返回：</strong></p>
+<pre><code>类型：Slide Down + Fade Out
+时长：250ms
+缓动：cubic-bezier(0.4, 0.0, 0.2, 1)
+位移：Y: 0px → 20px
+透明度：1 → 0</code></pre>
+<p><strong>Tab 切换：</strong></p>
+<pre><code>类型：Scale + Fade
+时长：200ms
+缩放：0.9 → 1.0
+透明度：0.5 → 1</code></pre>
+<h4 id="按钮反馈">按钮反馈</h4>
+<p><strong>点击反馈：</strong></p>
+<pre><code>Normal → Pressed:
+- 缩放：1.0 → 0.95
+- 时长：100ms
+- 阴影：减弱 50%
+
+Pressed → Normal:
+- 缩放：0.95 → 1.0
+- 时长：150ms
+- 弹性效果</code></pre>
+<p><strong>悬停反馈（Pad 端）：</strong></p>
+<pre><code>Normal → Hover:
+- 背景色变浅 10%
+- 阴影增强 20%
+- 时长：150ms</code></pre>
+<h4 id="加载状态">加载状态</h4>
+<p><strong>骨架屏加载：</strong></p>
+<pre><code>背景：Gray 100 → Gray 200 渐变动画
+方向：左 → 右
+时长：1.5s 循环
+应用：图片列表、内容区域</code></pre>
+<p><strong>进度指示器：</strong></p>
+<pre><code>类型：环形进度条
+颜色：Primary Purple
+线宽：3px
+时长：根据任务</code></pre>
+<p><strong>按钮加载：</strong></p>
+<pre><code>文字 → 旋转 Loading 图标
+按钮禁用状态
+时长：直到完成</code></pre>
+<h4 id="成功失败反馈">成功/失败反馈</h4>
+<p><strong>保存成功：</strong></p>
+<pre><code>类型：Toast + Check 动画
+位置：屏幕底部
+时长：2000ms
+图标：Green Check, 缩放弹跳效果</code></pre>
+<p><strong>操作失败：</strong></p>
+<pre><code>类型：Toast + Shake 动画
+位置：屏幕底部
+时长：2500ms
+图标：Red Error, 左右晃动</code></pre>
+<h3 id="特殊交互">9.4 特殊交互</h3>
+<h4 id="一键美颜">一键美颜</h4>
+<pre><code>触发：长按&quot;美颜&quot;按钮
+效果：AI 智能分析 + 自动调节
+动画：扫描光效 + 数值滚动
+时长：约 1.5s</code></pre>
+<h4 id="滤镜对比">滤镜对比</h4>
+<pre><code>触发：长按预览图
+效果：显示原图（手指抬起恢复）
+遮罩：50% 透明度切换
+延迟：100ms 后显示</code></pre>
+<h4 id="批量选择">批量选择</h4>
+<pre><code>触发：长按图片缩略图
+效果：进入多选模式
+选中：打勾动画 + 计数增加
+操作：底部弹出批量操作栏</code></pre>
+<hr />
+<h2 id="附录尺寸标注汇总">附录：尺寸标注汇总</h2>
+<h3 id="安全区域">安全区域</h3>
+<pre><code>顶部状态栏：24px (iPhone) / 20px (Android)
+底部 Home Indicator：34px (iPhone) / 0px (Android)
+左右安全边距：16px</code></pre>
+<h3 id="常用尺寸">常用尺寸</h3>
+<pre><code>大按钮高度：48px
+中按钮高度：40px
+小按钮高度：32px
+输入框高度：48px
+列表项高度：56px
+Tab 高度：44px / 56px
+卡片圆角：8px / 12px / 16px
+按钮圆角：24px (全圆角)</code></pre>
+<h3 id="间距系统">间距系统</h3>
+<pre><code>最小间距：4px
+小间距：8px
+中间距：12px / 16px
+大间距：24px / 32px
+超大间距：48px</code></pre>
+<hr />
+<p><strong>文档结束</strong></p>
+<p><em>本设计文档为 AIPhoto 高保真 UI/UX 设计稿 v1.0</em> <em>设计风格：现代简约、年轻化、活力感</em> <em>参考应用：醒图、美图秀秀、Snapseed、Lightroom Mobile</em></p>
